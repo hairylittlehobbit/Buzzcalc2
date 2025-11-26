@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83A0C63B2CC1C93D00DC7E59 /* calc2.html in Resources */ = {isa = PBXBuildFile; fileRef = 83A0C63A2CC1C93D00DC7E59 /* calc2.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83A0C61D2CC1C8A800DC7E59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83A0C5FE2CC1C8A500DC7E59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A0C6052CC1C8A500DC7E59;
+			remoteInfo = "Beer App";
+		};
+		83A0C6272CC1C8A800DC7E59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83A0C5FE2CC1C8A500DC7E59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83A0C6052CC1C8A500DC7E59;
+			remoteInfo = "Beer App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83A0C6062CC1C8A500DC7E59 /* BuzzCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuzzCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A0C61C2CC1C8A800DC7E59 /* BuzzCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A0C6262CC1C8A800DC7E59 /* BuzzCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A0C63A2CC1C93D00DC7E59 /* calc2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = calc2.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		83A0C62E2CC1C8A800DC7E59 /* Exceptions for "Beer App" folder in "BuzzCalc" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 83A0C6052CC1C8A500DC7E59 /* BuzzCalc */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		83A0C6082CC1C8A500DC7E59 /* Beer App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				83A0C62E2CC1C8A800DC7E59 /* Exceptions for "Beer App" folder in "BuzzCalc" target */,
+			);
+			path = "Beer App";
+			sourceTree = "<group>";
+		};
+		83A0C61F2CC1C8A800DC7E59 /* Beer AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Beer AppTests";
+			sourceTree = "<group>";
+		};
+		83A0C6292CC1C8A800DC7E59 /* Beer AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Beer AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83A0C6032CC1C8A500DC7E59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C6192CC1C8A800DC7E59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C6232CC1C8A800DC7E59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83A0C5FD2CC1C8A500DC7E59 = {
+			isa = PBXGroup;
+			children = (
+				83A0C63A2CC1C93D00DC7E59 /* calc2.html */,
+				83A0C6082CC1C8A500DC7E59 /* Beer App */,
+				83A0C61F2CC1C8A800DC7E59 /* Beer AppTests */,
+				83A0C6292CC1C8A800DC7E59 /* Beer AppUITests */,
+				83A0C6072CC1C8A500DC7E59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83A0C6072CC1C8A500DC7E59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83A0C6062CC1C8A500DC7E59 /* BuzzCalc.app */,
+				83A0C61C2CC1C8A800DC7E59 /* BuzzCalcTests.xctest */,
+				83A0C6262CC1C8A800DC7E59 /* BuzzCalcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83A0C6052CC1C8A500DC7E59 /* BuzzCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A0C62F2CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalc" */;
+			buildPhases = (
+				83A0C6022CC1C8A500DC7E59 /* Sources */,
+				83A0C6032CC1C8A500DC7E59 /* Frameworks */,
+				83A0C6042CC1C8A500DC7E59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				83A0C6082CC1C8A500DC7E59 /* Beer App */,
+			);
+			name = BuzzCalc;
+			packageProductDependencies = (
+			);
+			productName = "Beer App";
+			productReference = 83A0C6062CC1C8A500DC7E59 /* BuzzCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83A0C61B2CC1C8A800DC7E59 /* BuzzCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A0C6342CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalcTests" */;
+			buildPhases = (
+				83A0C6182CC1C8A800DC7E59 /* Sources */,
+				83A0C6192CC1C8A800DC7E59 /* Frameworks */,
+				83A0C61A2CC1C8A800DC7E59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A0C61E2CC1C8A800DC7E59 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				83A0C61F2CC1C8A800DC7E59 /* Beer AppTests */,
+			);
+			name = BuzzCalcTests;
+			packageProductDependencies = (
+			);
+			productName = "Beer AppTests";
+			productReference = 83A0C61C2CC1C8A800DC7E59 /* BuzzCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83A0C6252CC1C8A800DC7E59 /* BuzzCalcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83A0C6372CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalcUITests" */;
+			buildPhases = (
+				83A0C6222CC1C8A800DC7E59 /* Sources */,
+				83A0C6232CC1C8A800DC7E59 /* Frameworks */,
+				83A0C6242CC1C8A800DC7E59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83A0C6282CC1C8A800DC7E59 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				83A0C6292CC1C8A800DC7E59 /* Beer AppUITests */,
+			);
+			name = BuzzCalcUITests;
+			packageProductDependencies = (
+			);
+			productName = "Beer AppUITests";
+			productReference = 83A0C6262CC1C8A800DC7E59 /* BuzzCalcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83A0C5FE2CC1C8A500DC7E59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					83A0C6052CC1C8A500DC7E59 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					83A0C61B2CC1C8A800DC7E59 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 83A0C6052CC1C8A500DC7E59;
+					};
+					83A0C6252CC1C8A800DC7E59 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 83A0C6052CC1C8A500DC7E59;
+					};
+				};
+			};
+			buildConfigurationList = 83A0C6012CC1C8A500DC7E59 /* Build configuration list for PBXProject "BuzzCalc" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83A0C5FD2CC1C8A500DC7E59;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 83A0C6072CC1C8A500DC7E59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83A0C6052CC1C8A500DC7E59 /* BuzzCalc */,
+				83A0C61B2CC1C8A800DC7E59 /* BuzzCalcTests */,
+				83A0C6252CC1C8A800DC7E59 /* BuzzCalcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83A0C6042CC1C8A500DC7E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A0C63B2CC1C93D00DC7E59 /* calc2.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C61A2CC1C8A800DC7E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C6242CC1C8A800DC7E59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83A0C6022CC1C8A500DC7E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C6182CC1C8A800DC7E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83A0C6222CC1C8A800DC7E59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83A0C61E2CC1C8A800DC7E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A0C6052CC1C8A500DC7E59 /* BuzzCalc */;
+			targetProxy = 83A0C61D2CC1C8A800DC7E59 /* PBXContainerItemProxy */;
+		};
+		83A0C6282CC1C8A800DC7E59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83A0C6052CC1C8A500DC7E59 /* BuzzCalc */;
+			targetProxy = 83A0C6272CC1C8A800DC7E59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		83A0C6302CC1C8A800DC7E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = QDNW46DZB8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beer App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BuzzCalc;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.BuzzCalc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83A0C6312CC1C8A800DC7E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = QDNW46DZB8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beer App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BuzzCalc;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.BuzzCalc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83A0C6322CC1C8A800DC7E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83A0C6332CC1C8A800DC7E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83A0C6352CC1C8A800DC7E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.Beer-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuzzCalc.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BuzzCalc";
+			};
+			name = Debug;
+		};
+		83A0C6362CC1C8A800DC7E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.Beer-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BuzzCalc.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BuzzCalc";
+			};
+			name = Release;
+		};
+		83A0C6382CC1C8A800DC7E59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.Beer-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Beer App";
+			};
+			name = Debug;
+		};
+		83A0C6392CC1C8A800DC7E59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Beer-App.Beer-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Beer App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83A0C6012CC1C8A500DC7E59 /* Build configuration list for PBXProject "BuzzCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0C6322CC1C8A800DC7E59 /* Debug */,
+				83A0C6332CC1C8A800DC7E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A0C62F2CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0C6302CC1C8A800DC7E59 /* Debug */,
+				83A0C6312CC1C8A800DC7E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A0C6342CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0C6352CC1C8A800DC7E59 /* Debug */,
+				83A0C6362CC1C8A800DC7E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83A0C6372CC1C8A800DC7E59 /* Build configuration list for PBXNativeTarget "BuzzCalcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83A0C6382CC1C8A800DC7E59 /* Debug */,
+				83A0C6392CC1C8A800DC7E59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83A0C5FE2CC1C8A500DC7E59 /* Project object */;
+}

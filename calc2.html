@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Beer Standard Drinks Calculator</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f0e6d2;
+            color: #5a4526;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff5e1;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button-container button, .track-buttons button {
+            background-color: #d19864;
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button.selected {
+            background-color: #b97854;
+        }
+
+        .slider-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .slider-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .slider-container input[type=range] {
+            width: 100%;
+        }
+
+        /* New styles for the bottom section */
+        .bottom-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .bottom-section .total-container {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .track-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .track-buttons button {
+            width: auto;
+            padding: 10px 20px;
+        }
+
+        @media (max-width: 600px) {
+            .button-container button {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .result {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body onload="initializeApp()">
+
+<div class="container">
+    <!-- Result Display -->
+    <div class="result">
+        <p>Standard Drinks: <span id="standard-drinks">0</span></p>
+    </div>
+
+    <!-- Drink Size Buttons -->
+    <div class="button-container">
+        <button onclick="setVolume(280, this)">Middy/Pot 280ml</button>
+        <button onclick="setVolume(425, this)">Schooner 425ml</button>
+        <button onclick="setVolume(568, this)">Pint 568ml</button>
+    </div>
+
+    <!-- ABV Slider -->
+    <div class="slider-container">
+        <label for="abv">ABV: <span id="abv-value">5%</span></label>
+        <input type="range" id="abv" min="2.5" max="10" value="5" step="0.1" oninput="updateABV()">
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <!-- Total Display -->
+        <div class="total-container">
+            <p>Total: <span id="total-drinks">0</span> Standard Drinks</p>
+        </div>
+
+        <!-- Add Drink and Clear Total Buttons in the same row -->
+        <div class="track-buttons">
+            <button onclick="addDrink()">Add Drink</button>
+            <button onclick="clearTotal()">Clear Total</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let volume = 0;
+    let totalDrinks = 0;
+    const abvSlider = document.getElementById('abv');
+    const abvValue = document.getElementById('abv-value');
+    const standardDrinksElement = document.getElementById('standard-drinks');
+    const totalDrinksElement = document.getElementById('total-drinks');
+    let selectedButton = null;
+
+    function initializeApp() {
+        // Set default to Schooner (425 ml) and select the button
+        const schoonerButton = document.querySelector('.button-container button:nth-child(2)');
+        setVolume(425, schoonerButton);
+        updateABV();
+    }
+
+    function setVolume(ml, button) {
+        volume = ml / 1000; // convert to litres
+        calculateStandardDrinks();
+        
+        // Update selected button styling
+        if (selectedButton) {
+            selectedButton.classList.remove('selected');
+        }
+        button.classList.add('selected');
+        selectedButton = button;
+    }
+
+    function updateABV() {
+        abvValue.textContent = abvSlider.value + '%';
+        calculateStandardDrinks();
+    }
+
+    function calculateStandardDrinks() {
+        if (volume > 0) {
+            const abv = abvSlider.value / 100;
+            const densityOfEthanol = 0.789; // g/ml at 20°C
+            const standardDrinks = (volume * abv * densityOfEthanol * 1000) / 10;
+            standardDrinksElement.textContent = standardDrinks.toFixed(2);
+        }
+    }
+
+    function addDrink() {
+        const currentStandardDrinks = parseFloat(standardDrinksElement.textContent);
+        if (!isNaN(currentStandardDrinks) && currentStandardDrinks > 0) {
+            totalDrinks += currentStandardDrinks;
+            updateTotalDisplay();
+        }
+    }
+
+    function clearTotal() {
+        totalDrinks = 0;
+        updateTotalDisplay();
+    }
+
+    function updateTotalDisplay() {
+        totalDrinksElement.textContent = totalDrinks.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
