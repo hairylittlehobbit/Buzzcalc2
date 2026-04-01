@@ -1,0 +1,78 @@
+APP STORE CONNECT — SUBMISSION METADATA
+BuzzCalc
+=======================================
+
+APP INFORMATION
+---------------
+Name:           BuzzCalc
+Subtitle:       Standard Drinks Calculator
+Bundle ID:      (confirm in Xcode → Target → Signing & Capabilities)
+SKU:            BUZZCALC001
+Primary Category:    Health & Fitness
+Secondary Category:  Utilities
+
+
+DESCRIPTION (max 4000 chars)
+-----------------------------
+BuzzCalc helps you track your standard drinks in real time — so you always know how much you've had.
+
+Select your glass size (Middy/Pot, Schooner, or Pint), set the ABV using the slider, and BuzzCalc instantly calculates the number of standard drinks. Tap Add Drink to build up your running total throughout the session.
+
+Features:
+• Accurate standard drinks calculation using ethanol density
+• Supports Middy/Pot (280ml), Schooner (425ml), and Pint (568ml)
+• ABV slider from 2.5% to 10%
+• Running total tracker
+• Session start time — stamps the date and time your first drink was added
+• Session persistence — your total is saved if the app is closed or iOS clears memory, and resets automatically the next day
+
+
+KEYWORDS (max 100 chars)
+-------------------------
+standard drinks,beer,alcohol,tracker,calculator,ABV,drinks calculator,session
+
+
+PROMOTIONAL TEXT (max 170 chars — can be updated without a new build)
+----------------------------------------------------------------------
+Track your standard drinks as you go. Simple, accurate, and built for Australian glass sizes.
+
+
+WHAT'S NEW (version release notes)
+------------------------------------
+• Your running total is now saved if the app is closed — picks up right where you left off and resets automatically the next day.
+• Session start time is now displayed on screen when you add your first drink.
+
+
+SUPPORT & URLS
+--------------
+Support URL:       [ADD YOUR URL — required]
+Marketing URL:     [OPTIONAL]
+Privacy Policy URL:[ADD YOUR URL — required]
+
+
+AGE RATING
+----------
+NOTE: Because this app relates to alcohol tracking, Apple will likely rate it 17+
+under "Frequent/Intense Alcohol, Tobacco or Drug Use or References".
+Complete the age rating questionnaire honestly in App Store Connect.
+
+
+APP REVIEW NOTES
+----------------
+This is a standard drinks calculator for personal use.
+No login required. No account needed. No network requests made.
+All data is stored locally on device only.
+
+
+SCREENSHOTS NEEDED (before submitting)
+---------------------------------------
+Required sizes — capture from Xcode Simulator:
+  • 6.5" (iPhone 14 Plus / 15 Plus)   — 1290 x 2796px
+  • 5.5" (iPhone 8 Plus)               — 1242 x 2208px
+
+Optional but recommended:
+  • 6.7" (iPhone 16 Pro Max)           — 1320 x 2868px
+
+Suggested screens to capture:
+  1. App open, Schooner selected, ABV at 5% — showing standard drinks calculated
+  2. Running total with session start time displayed
