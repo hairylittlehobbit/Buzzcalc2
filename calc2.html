@@ -92,6 +92,13 @@
             padding: 10px 20px;
         }
 
+        .session-start {
+            font-size: 14px;
+            color: #8a6a3a;
+            margin-bottom: 10px;
+            display: none;
+        }
+
         @media (max-width: 600px) {
             .button-container button {
                 font-size: 14px;
@@ -132,6 +139,9 @@
             <p>Total: <span id="total-drinks">0</span> Standard Drinks</p>
         </div>
 
+        <!-- Session start time -->
+        <p class="session-start" id="session-start"></p>
+
         <!-- Add Drink and Clear Total Buttons in the same row -->
         <div class="track-buttons">
             <button onclick="addDrink()">Add Drink</button>
@@ -143,10 +153,12 @@
 <script>
     let volume = 0;
     let totalDrinks = 0;
+    let sessionStartTime = null;
     const abvSlider = document.getElementById('abv');
     const abvValue = document.getElementById('abv-value');
     const standardDrinksElement = document.getElementById('standard-drinks');
     const totalDrinksElement = document.getElementById('total-drinks');
+    const sessionStartElement = document.getElementById('session-start');
     let selectedButton = null;
 
     function initializeApp() {
@@ -185,6 +197,9 @@
     function addDrink() {
         const currentStandardDrinks = parseFloat(standardDrinksElement.textContent);
         if (!isNaN(currentStandardDrinks) && currentStandardDrinks > 0) {
+            if (totalDrinks === 0) {
+                sessionStartTime = new Date();
+            }
             totalDrinks += currentStandardDrinks;
             updateTotalDisplay();
         }
@@ -192,11 +207,40 @@
 
     function clearTotal() {
         totalDrinks = 0;
+        sessionStartTime = null;
         updateTotalDisplay();
+    }
+
+    function setTotalDrinks(value) {
+        totalDrinks = value;
+        updateTotalDisplay();
+    }
+
+    function setSessionStart(isoString) {
+        sessionStartTime = isoString ? new Date(isoString) : null;
+        updateSessionStartDisplay();
+    }
+
+    function updateSessionStartDisplay() {
+        if (sessionStartTime) {
+            const dateStr = sessionStartTime.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' });
+            const timeStr = sessionStartTime.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true });
+            sessionStartElement.textContent = 'Started: ' + dateStr + ', ' + timeStr;
+            sessionStartElement.style.display = 'block';
+        } else {
+            sessionStartElement.style.display = 'none';
+        }
     }
 
     function updateTotalDisplay() {
         totalDrinksElement.textContent = totalDrinks.toFixed(2);
+        updateSessionStartDisplay();
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.saveDrinks) {
+            window.webkit.messageHandlers.saveDrinks.postMessage({
+                total: totalDrinks,
+                startTime: sessionStartTime ? sessionStartTime.toISOString() : null
+            });
+        }
     }
 </script>
 
