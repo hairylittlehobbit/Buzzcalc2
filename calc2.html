@@ -96,7 +96,7 @@
             font-size: 14px;
             color: #8a6a3a;
             margin-bottom: 10px;
-            display: none;
+            visibility: hidden;
         }
 
         .custom-toggle {
@@ -341,9 +341,9 @@
             const dateStr = sessionStartTime.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' });
             const timeStr = sessionStartTime.toLocaleTimeString('en-AU', { hour: 'numeric', minute: '2-digit', hour12: true });
             sessionStartElement.textContent = 'Started: ' + dateStr + ', ' + timeStr;
-            sessionStartElement.style.display = 'block';
+            sessionStartElement.style.visibility = 'visible';
         } else {
-            sessionStartElement.style.display = 'none';
+            sessionStartElement.style.visibility = 'hidden';
         }
     }
 
