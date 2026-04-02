@@ -99,6 +99,55 @@
             display: none;
         }
 
+        .custom-toggle {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #8a6a3a;
+            cursor: pointer;
+            user-select: none;
+            padding: 8px 0;
+            border-top: 1px solid #e0d0b0;
+        }
+
+        .custom-section {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .custom-field {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .custom-field label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #5a4526;
+            width: 60px;
+            text-align: left;
+        }
+
+        .custom-field input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #d19864;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #5a4526;
+            background-color: #f0e6d2;
+            text-align: center;
+        }
+
+        .custom-field .unit {
+            font-size: 16px;
+            color: #8a6a3a;
+            width: 30px;
+            text-align: left;
+        }
+
         @media (max-width: 600px) {
             .button-container button {
                 font-size: 14px;
@@ -132,6 +181,23 @@
         <input type="range" id="abv" min="2.5" max="10" value="5" step="0.1" oninput="updateABV()">
     </div>
 
+    <!-- Custom Size -->
+    <div class="custom-toggle" onclick="toggleCustom()">
+        <span id="custom-toggle-label">▼ Custom size</span>
+    </div>
+    <div class="custom-section" id="custom-section">
+        <div class="custom-field">
+            <label for="custom-ml">Volume</label>
+            <input type="number" id="custom-ml" placeholder="e.g. 330" min="1" oninput="calculateCustomDrinks()">
+            <span class="unit">ml</span>
+        </div>
+        <div class="custom-field">
+            <label for="custom-abv">ABV</label>
+            <input type="number" id="custom-abv" placeholder="e.g. 4.5" min="0" max="100" step="0.1" oninput="calculateCustomDrinks()">
+            <span class="unit">%</span>
+        </div>
+    </div>
+
     <!-- Bottom Section -->
     <div class="bottom-section">
         <!-- Total Display -->
@@ -154,11 +220,15 @@
     let volume = 0;
     let totalDrinks = 0;
     let sessionStartTime = null;
+    let customMode = false;
     const abvSlider = document.getElementById('abv');
     const abvValue = document.getElementById('abv-value');
     const standardDrinksElement = document.getElementById('standard-drinks');
     const totalDrinksElement = document.getElementById('total-drinks');
     const sessionStartElement = document.getElementById('session-start');
+    const customSection = document.getElementById('custom-section');
+    const customToggleLabel = document.getElementById('custom-toggle-label');
+    const sliderContainer = document.querySelector('.slider-container');
     let selectedButton = null;
 
     function initializeApp() {
@@ -169,15 +239,57 @@
     }
 
     function setVolume(ml, button) {
+        if (customMode) collapseCustom();
         volume = ml / 1000; // convert to litres
         calculateStandardDrinks();
-        
+
         // Update selected button styling
         if (selectedButton) {
             selectedButton.classList.remove('selected');
         }
         button.classList.add('selected');
         selectedButton = button;
+    }
+
+    function toggleCustom() {
+        if (customMode) {
+            collapseCustom();
+        } else {
+            // Deselect any beer button
+            if (selectedButton) {
+                selectedButton.classList.remove('selected');
+                selectedButton = null;
+            }
+            volume = 0;
+            customMode = true;
+            customSection.style.display = 'block';
+            sliderContainer.style.display = 'none';
+            customToggleLabel.textContent = '▲ Custom size';
+            standardDrinksElement.textContent = '0';
+        }
+    }
+
+    function collapseCustom() {
+        customMode = false;
+        customSection.style.display = 'none';
+        sliderContainer.style.display = 'block';
+        customToggleLabel.textContent = '▼ Custom size';
+        document.getElementById('custom-ml').value = '';
+        document.getElementById('custom-abv').value = '';
+        standardDrinksElement.textContent = '0';
+        volume = 0;
+    }
+
+    function calculateCustomDrinks() {
+        const ml = parseFloat(document.getElementById('custom-ml').value);
+        const abv = parseFloat(document.getElementById('custom-abv').value);
+        if (!isNaN(ml) && !isNaN(abv) && ml > 0 && abv > 0) {
+            const densityOfEthanol = 0.789;
+            const standardDrinks = ((ml / 1000) * (abv / 100) * densityOfEthanol * 1000) / 10;
+            standardDrinksElement.textContent = standardDrinks.toFixed(2);
+        } else {
+            standardDrinksElement.textContent = '0';
+        }
     }
 
     function updateABV() {
