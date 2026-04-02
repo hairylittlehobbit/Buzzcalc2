@@ -229,6 +229,7 @@
     const customSection = document.getElementById('custom-section');
     const customToggleLabel = document.getElementById('custom-toggle-label');
     const sliderContainer = document.querySelector('.slider-container');
+    const buttonContainer = document.querySelector('.button-container');
     let selectedButton = null;
 
     function initializeApp() {
@@ -264,6 +265,7 @@
             customMode = true;
             customSection.style.display = 'block';
             sliderContainer.style.display = 'none';
+            buttonContainer.style.display = 'none';
             customToggleLabel.textContent = '▲ Custom size';
             standardDrinksElement.textContent = '0';
         }
@@ -273,6 +275,7 @@
         customMode = false;
         customSection.style.display = 'none';
         sliderContainer.style.display = 'block';
+        buttonContainer.style.display = 'block';
         customToggleLabel.textContent = '▼ Custom size';
         document.getElementById('custom-ml').value = '';
         document.getElementById('custom-abv').value = '';
